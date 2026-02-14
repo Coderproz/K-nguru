@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Känguru Math Quest</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1 id="app-title">تحدي كنغر الرياضيات (الصف 3-4)</h1>
+      <div class="controls">
+        <label>
+          <span id="lang-label">اللغة</span>
+          <select id="language-select">
+            <option value="ar">العربية</option>
+            <option value="de">Deutsch</option>
+            <option value="en">English</option>
+          </select>
+        </label>
+        <label>
+          <span id="year-label">السنة</span>
+          <select id="year-select"></select>
+        </label>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="panel stats-panel">
+        <h2 id="progress-title">التقدم</h2>
+        <p><strong id="score-label">النقاط</strong>: <span id="score">0</span></p>
+        <p><strong id="answered-label">المحاولات</strong>: <span id="answered">0</span></p>
+        <p><strong id="skipped-label">المتخطّى</strong>: <span id="skipped-count">0</span></p>
+        <button id="resume-skipped"></button>
+      </aside>
+
+      <section class="panel question-panel">
+        <div class="question-meta">
+          <span id="question-index"></span>
+          <span id="question-points"></span>
+        </div>
+        <h2 id="question-text"></h2>
+        <div id="choices" class="choices"></div>
+
+        <div class="hint-box">
+          <h3 id="hint-title"></h3>
+          <p id="hint-step"></p>
+          <button id="next-hint"></button>
+        </div>
+
+        <div class="actions">
+          <button id="submit-btn"></button>
+          <button id="skip-btn"></button>
+          <button id="next-btn"></button>
+        </div>
+
+        <p id="feedback" aria-live="polite"></p>
+      </section>
+
+      <aside class="panel sources-panel">
+        <h2 id="source-title"></h2>
+        <p id="source-desc"></p>
+        <ul id="source-list"></ul>
+      </aside>
+    </main>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
